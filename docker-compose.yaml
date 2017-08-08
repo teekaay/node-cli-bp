@@ -1,0 +1,8 @@
+version: "2.0"
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - NODE_ENV=develop

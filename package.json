@@ -1,0 +1,50 @@
+{
+  "name": "node-cli-template",
+  "description": "Just command line tool things",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": "Thomas Klinger <thomas.klinger@otto.de>",
+  "contributors": [],
+  "license": "Apache",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teekaay/node-cli-bp"
+  },
+  "keywords": [
+    "cli",
+    "boilerplate"
+  ],
+  "scripts": {
+    "start": "./bin/cli.js",
+    "test": "npm run build -- test",
+    "build": "./node_modules/.bin/grunt",
+    "precommit": "npm run build -- verify",
+    "prepush": "npm run build -- verify",
+    "pretest": "npm run build -- clean"
+  },
+  "dependencies": {
+    "commander": "^2.11.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-plugin-ava": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "grunt": "^1.0.1",
+    "grunt-ava": "^0.18.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.0.0",
+    "grunt-nsp": "^2.3.1",
+    "grunt-parallel": "^0.5.1",
+    "husky": "^0.14.3",
+    "istanbul": "^0.4.5",
+    "load-grunt-tasks": "^3.5.2",
+    "nyc": "^11.0.3",
+    "time-grunt": "^1.4.0",
+    "validate-commit-msg": "^2.12.2"
+  },
+  "config": {
+    "validate-commit-msg": {}
+  }
+}
